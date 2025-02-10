@@ -29,10 +29,10 @@
 * [x] O cliente nao deve possuir mais de 300 reais em divida
 * [x] NAO CRIAR STATUS DIVIDA como CHAR
 
-* [] Criar Entidades
-* [] Criar Mapeamento
-* [] Conexão com banco de dados
-* [] DTOS para exibição em tela
+* [x] Criar Entidades
+* [x] Criar Mapeamento
+* [x] Conexão com banco de dados
+* [x] DTOS para exibição em tela
 * [] Criar Services Validações para cpf e email
 * [] Criar Services Cllientes
 * [] Criar Services para Dividas

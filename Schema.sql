@@ -10,7 +10,8 @@ create table vendinha.clientes(
 	d_datanascimeto date not null,
 	d_datacadastro date default(current_date),
 	telefone varchar(15) not null,
-	observacao varchar(100)
+	observacao varchar(100),
+	situacao integer
 );
 
 create sequence vendinha.divida_id_seq;

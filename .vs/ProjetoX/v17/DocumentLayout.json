@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Venda.API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{019378AE-D1DF-497A-ADEE-1986526031F3}|Itens de Solu\u00E7\u00E3o{019378AE-D1DF-497A-ADEE-1986526031F3}|D:\\Venda.API\\Read.mD||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{019378AE-D1DF-497A-ADEE-1986526031F3}|Itens de Solu\u00E7\u00E3o{019378AE-D1DF-497A-ADEE-1986526031F3}|solutionrelative:Read.mD||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|d:\\venda.api\\venda.domain\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|d:\\venda.api\\venda.domain\\mapeamento\\clientes.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\mapeamento\\clientes.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 111,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +35,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteDto.cs",
+              "DocumentMoniker": "D:\\Venda.API\\Venda.DOMAIN\\ClienteDto.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\ClienteDto.cs",
+              "ToolTip": "D:\\Venda.API\\Venda.DOMAIN\\ClienteDto.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\ClienteDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T20:35:14.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Read.mD",
+              "DocumentMoniker": "D:\\Venda.API\\Read.mD",
+              "RelativeDocumentMoniker": "Read.mD",
+              "ToolTip": "D:\\Venda.API\\Read.mD",
+              "RelativeToolTip": "Read.mD",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-02-10T20:34:44.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Clientes.hbm.xml",
+              "DocumentMoniker": "D:\\Venda.API\\Venda.DOMAIN\\Mapeamento\\Clientes.hbm.xml",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Mapeamento\\Clientes.hbm.xml",
+              "ToolTip": "D:\\Venda.API\\Venda.DOMAIN\\Mapeamento\\Clientes.hbm.xml",
+              "RelativeToolTip": "Venda.DOMAIN\\Mapeamento\\Clientes.hbm.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-02-10T20:31:54.432Z",
+              "EditorCaption": ""
             }
           ]
         }
