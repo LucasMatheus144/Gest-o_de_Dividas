@@ -1,7 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Venda.API\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C26EBCEE-7A7E-4B4B-B426-0DCB0DC8D2F4}|Venda.API\\Venda.API.csproj|c:\\users\\interfocus\\source\\repos\\gest-o_de_dividas\\venda.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C26EBCEE-7A7E-4B4B-B426-0DCB0DC8D2F4}|Venda.API\\Venda.API.csproj|solutionrelative:venda.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C26EBCEE-7A7E-4B4B-B426-0DCB0DC8D2F4}|Venda.API\\Venda.API.csproj|c:\\users\\interfocus\\source\\repos\\gest-o_de_dividas\\venda.api\\venda.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C26EBCEE-7A7E-4B4B-B426-0DCB0DC8D2F4}|Venda.API\\Venda.API.csproj|solutionrelative:venda.api\\venda.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\interfocus\\source\\repos\\gest-o_de_dividas\\venda.domain\\venda.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\venda.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\interfocus\\source\\repos\\gest-o_de_dividas\\venda.domain\\entidades\\divida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\entidades\\divida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\interfocus\\source\\repos\\gest-o_de_dividas\\venda.domain\\services\\dividasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\services\\dividasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\interfocus\\source\\repos\\gest-o_de_dividas\\venda.domain\\enums\\situacaodivida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\enums\\situacaodivida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\interfocus\\source\\repos\\gest-o_de_dividas\\venda.domain\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\interfocus\\source\\repos\\gest-o_de_dividas\\venda.domain\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 111,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +55,105 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Venda.DOMAIN",
+              "DocumentMoniker": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Venda.DOMAIN.csproj",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Venda.DOMAIN.csproj",
+              "ToolTip": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Venda.DOMAIN.csproj",
+              "RelativeToolTip": "Venda.DOMAIN\\Venda.DOMAIN.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-11T18:17:26.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Venda.API.csproj",
+              "DocumentMoniker": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.API\\Venda.API.csproj",
+              "RelativeDocumentMoniker": "Venda.API\\Venda.API.csproj",
+              "ToolTip": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.API\\Venda.API.csproj",
+              "RelativeToolTip": "Venda.API\\Venda.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-11T17:13:17.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.API\\Program.cs",
+              "RelativeDocumentMoniker": "Venda.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.API\\Program.cs",
+              "RelativeToolTip": "Venda.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T17:03:51.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Divida.cs",
+              "DocumentMoniker": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Entidades\\Divida.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Entidades\\Divida.cs",
+              "ToolTip": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Entidades\\Divida.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\Entidades\\Divida.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T17:00:46.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DividasService.cs",
+              "DocumentMoniker": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Services\\DividasService.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Services\\DividasService.cs",
+              "ToolTip": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Services\\DividasService.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\Services\\DividasService.cs",
+              "ViewState": "AgIAAIcAAACAwln5CXEYwJYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T16:49:53.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SituacaoDivida.cs",
+              "DocumentMoniker": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Enums\\SituacaoDivida.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Enums\\SituacaoDivida.cs",
+              "ToolTip": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Enums\\SituacaoDivida.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\Enums\\SituacaoDivida.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T16:34:49.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClienteDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\DTOs\\ClienteDTO.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\DTOs\\ClienteDTO.cs",
+              "ToolTip": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\DTOs\\ClienteDTO.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\DTOs\\ClienteDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T16:33:31.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClienteService.cs",
+              "DocumentMoniker": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Services\\ClienteService.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Services\\ClienteService.cs",
+              "ToolTip": "C:\\Users\\Interfocus\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Services\\ClienteService.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\Services\\ClienteService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T16:28:34.369Z"
             }
           ]
         }

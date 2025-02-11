@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Venda.API"
   ],
-  "SelectedNode": "\\ProjetoX.sln",
+  "SelectedNode": "\\Venda.API\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

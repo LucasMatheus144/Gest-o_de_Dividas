@@ -1,0 +1,8 @@
+C:\Users\Interfocus\source\repos\Gest-o_de_Dividas\Venda.API\obj\Debug\net9.0\Venda.API.csproj.AssemblyReference.cache
+C:\Users\Interfocus\source\repos\Gest-o_de_Dividas\Venda.API\obj\Debug\net9.0\Venda.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Interfocus\source\repos\Gest-o_de_Dividas\Venda.API\obj\Debug\net9.0\Venda.API.AssemblyInfoInputs.cache
+C:\Users\Interfocus\source\repos\Gest-o_de_Dividas\Venda.API\obj\Debug\net9.0\Venda.API.AssemblyInfo.cs
+C:\Users\Interfocus\source\repos\Gest-o_de_Dividas\Venda.API\obj\Debug\net9.0\Venda.API.csproj.CoreCompileInputs.cache
+C:\Users\Interfocus\source\repos\Gest-o_de_Dividas\Venda.API\obj\Debug\net9.0\Venda.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Interfocus\source\repos\Gest-o_de_Dividas\Venda.API\obj\Debug\net9.0\Venda.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Interfocus\source\repos\Gest-o_de_Dividas\Venda.API\obj\Debug\net9.0\Venda.API.sourcelink.json

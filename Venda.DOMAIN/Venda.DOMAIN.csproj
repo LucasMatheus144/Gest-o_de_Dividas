@@ -8,7 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <None Remove="Mapeamento\Clientes.hbm.xml" />
+    <None Remove="Mapeamento\Divida.hbm.xml" />
+    <None Remove="Mapeamento\ParametroChaveValor.hbm.xml" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Mapeamento\Clientes.hbm.xml" />
+    <EmbeddedResource Include="Mapeamento\Divida.hbm.xml" />
+    <EmbeddedResource Include="Mapeamento\ParametroChaveValor.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nhibernate" Version="5.5.2" />
+	 <PackageReference Include="npgsql" Version="9.0.2" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<None Update="hibernate.cfg.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>

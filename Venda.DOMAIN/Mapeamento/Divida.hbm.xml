@@ -13,7 +13,9 @@
     <property name="Descricao" column="descricao" length="100"/>
     <property name="Valor" column="valor" not-null="true" type="decimal"/>
     <property name="Situacao" column="situacao" not-null="true" type="int"/>
-
+    <property name="DataCadastro" column="d_datacadastro" type="date"/>
+    <property name="DataPagamento" column="d_datapagamento" type="date"/>
+	  
     <many-to-one name="Cliente" column="cliente_id" class="Cliente" not-null="true"/>
 
   </class>

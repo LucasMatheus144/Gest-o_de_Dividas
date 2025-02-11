@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Venda.DOMAIN.Enums;
+using static Venda.DOMAIN.Services.ValidacaoService;
 
 namespace Venda.DOMAIN.Entidades
 {
@@ -14,6 +15,7 @@ namespace Venda.DOMAIN.Entidades
 
         [Required]
         [MaxLength(30,ErrorMessage = "O emails precisa ter no maximo 30 caracteres")]
+        [ValidaEmail]
         public string Email { get; set; } = string.Empty;
 
         [Required]

@@ -1,0 +1,223 @@
+﻿using NHibernate;
+using NHibernate.Criterion;
+using System.ComponentModel.DataAnnotations;
+using Venda.DOMAIN.Entidades;
+using Venda.DOMAIN.Enums;
+using Venda.DOMAIN.Services;
+using Vendinha.DOMINIO.DTO;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Venda.DOMAIN.Services { 
+
+    public class DividasService
+    {
+        private readonly ISessionFactory _session;
+
+        public DividasService(ISessionFactory session)
+        {
+            this._session = session;
+        }
+
+        public bool CriarDividaCliente(Divida divida, out List<ValidationResult> errors)
+        {
+            errors = new List<ValidationResult>();
+
+            if (!ValidacaoService.Validar(divida, out errors)) return false;
+
+            if (divida.Cliente.Id <= 0)
+            {
+                errors.Add(new ValidationResult("Id invalido.", new[] { nameof(Divida.Cliente) }));
+                return false;
+            }
+
+            using var sessao = _session.OpenSession();
+            using var salvar = sessao.BeginTransaction();
+
+            var cliente = sessao.Get<Cliente>(divida.Cliente.Id);
+            if (cliente == null)
+            {
+                errors.Add(new ValidationResult("Cliente n�o encontrado.", new[] { nameof(Divida.Cliente) }));
+                return false;
+            }
+
+            //divida.Cliente = cliente; 
+
+            int chavevalor = ValidaValorDivida(cliente.Id);
+
+            // validar o valor da divida superior ao parametrizado
+
+            if (PodeOuNaoDivida(divida.Cliente.Id))
+            {
+                errors.Add(new ValidationResult($"O cliente possui dividas superiores a {chavevalor} ", new[] { nameof(Divida.Valor) }));
+                return false;
+            }
+
+            try
+            {
+                sessao.Save(divida);
+                salvar.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                salvar.Rollback();
+                TratarRetornoErros(ex, errors);
+                return false;
+            }
+        }
+
+        public bool EditarDividaCliente(Divida divida, out List<ValidationResult> errors)
+        {
+            errors = new List<ValidationResult>();
+
+            if (!ValidacaoService.Validar(divida, out errors)) return false;
+
+            if (divida.Cliente.Id <= 0)
+            {
+                errors.Add(new ValidationResult("Id invalido.", new[] { nameof(Divida.Cliente) }));
+                return false;
+            }
+
+            using var sessao = _session.OpenSession();
+            using var salvar = sessao.BeginTransaction();
+
+            var cliente = sessao.Get<Cliente>(divida.Cliente.Id);
+            if (cliente == null)
+            {
+                errors.Add(new ValidationResult("Cliente n�o encontrado.", new[] { nameof(Divida.Cliente) }));
+                return false;
+            }
+
+            if (PodeOuNaoDivida(divida.Cliente.Id))
+            {
+                errors.Add(new ValidationResult($"O cliente ja possui muitas dividas ", new[] { nameof(Divida.Valor) }));
+                return false;
+            }
+
+            try
+            {
+                sessao.Merge(divida);
+                salvar.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                salvar.Rollback();
+                TratarRetornoErros(ex, errors);
+                return false;
+            }
+        }
+
+        public bool ExcluirDividaClieente(Divida divida, out List<ValidationResult> errors)
+        {
+            errors = new List<ValidationResult>();
+
+            if (!ValidacaoService.Validar(divida, out errors)) return false;
+
+            if (divida.Cliente.Id <= 0)
+            {
+                errors.Add(new ValidationResult("Id invalido.", new[] { nameof(Divida.Cliente) }));
+                return false;
+            }
+
+            using var sessao = _session.OpenSession();
+            using var salvar = sessao.BeginTransaction();
+
+            var cliente = sessao.Get<Cliente>(divida.Cliente.Id);
+            if (cliente == null)
+            {
+                errors.Add(new ValidationResult("Cliente n�o encontrado.", new[] { nameof(Divida.Cliente) }));
+                return false;
+            }
+
+            try
+            {
+                sessao.Delete(divida);
+                salvar.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                salvar.Rollback();
+                TratarRetornoErros(ex, errors);
+                return false;
+            }
+        }
+
+        public List<DividasDto> ListarDividas(int? id, string? search = "", int limit = 10, int offset = 0)
+        {
+            using var sessao = _session.OpenSession();
+
+            var query = sessao.Query<Divida>()
+                .Where(d =>
+                    (id == null || d.Cliente.Id == id) &&
+                    (string.IsNullOrWhiteSpace(search) || d.Descricao.Contains(search)))
+                .Select(d => new DividasDto
+                {
+                    Id = d.Id,
+                    Nome = d.Cliente.Nome,
+                    Descricao = d.Descricao,
+                    Valor = d.Valor,
+                    Cadastro = d.DataCadastro,
+                    Pagou = d.DataPagamento.HasValue ? d.DataPagamento.Value.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture) : string.Empty
+                })
+                .Skip(offset)
+                .Take(limit)
+                .ToList();
+
+            return query;
+        }
+
+        private bool PodeOuNaoDivida(int id)
+        {
+            using var sessao = _session.OpenSession();
+            using var salvar = sessao.BeginTransaction();
+
+            var totalDivida = sessao.QueryOver<Divida>()
+               .Where(d => d.Cliente.Id == id && d.Status != SituacaoDivida.EmDia )
+               .Select(Projections.Sum<Divida>(d => d.Valor))
+               .SingleOrDefault<decimal>();
+
+            int chavevalor = ValidaValorDivida(id);
+
+            if (totalDivida >= chavevalor)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private int ValidaValorDivida(int id)
+        {
+            using var sessao = _session.OpenSession();
+
+            var resultado = sessao.CreateSQLQuery("SELECT vendinha.valida_newdivida(:id)")
+                                  .SetParameter("id", id)
+                                  .UniqueResult<int>();
+
+            return resultado;
+        }
+
+
+
+        private void TratarRetornoErros(Exception ex, List<ValidationResult> erros)
+        {
+            var message = ex.InnerException?.Message ?? ex.Message;
+
+            if (message.Contains("is not mapped"))
+            {
+                erros.Add(new ValidationResult("Ajusta esse xml ai"));
+            }
+            else if (message.Contains("O cliente já bateu o limite de dívidas."))
+            {
+                erros.Add(new ValidationResult("O cliente já bateu o limite de dívidas"));
+            }
+            else
+            {
+                erros.Add(new ValidationResult("Erro ao processar a opera��o"));
+            }
+        }
+    }
+
+}

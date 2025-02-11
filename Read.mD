@@ -51,4 +51,11 @@
 
 </details>
 
+<details><summary align="center">Prints</summary>Observações<div align="center">
+
+###### A propriedade dos arquivos de mapeamento precisa ser Recurso Inserido e Não Copiar
+
+</div>
+
+</details>
 

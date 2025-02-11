@@ -3,7 +3,7 @@ create schema vendinha;
 create sequence vendinha.cliente_id_seq;
 
 create table vendinha.clientes(
-	id integer primary key default("vendinha.cliente_id_seq"),
+	id integer primary key default nextval('vendinha.cliente_id_seq'),
 	nome varchar(25) not null,
 	email varchar(30) not null unique,
 	cpf_cnpj varchar(16) not null unique,
@@ -17,24 +17,26 @@ create table vendinha.clientes(
 create sequence vendinha.divida_id_seq;
 
 create table vendinha.divida(
-	id integer primary key default("vendinha.divida_id_seq"),
+	id integer primary key default nextval('vendinha.divida_id_seq'),
 	cliente_id integer references vendinha.clientes(id) not null,
+	d_datacadastro date,
+	d_datapagamento date,
 	descricao varchar(100),
 	valor decimal not null,
-	situacao integer not null,
+	situacao integer not null
 );
 
 create sequence vendinha.parametro_id_seq;
 
 create table vendinha.parametrochavevalor(
-	id integer primary key default ("vendinha.parametro_id_seq"),
+	id integer primary key default nextval ('vendinha.parametro_id_seq'),
 	nome varchar(20),
 	valor integer,
 	situacao boolean
 );
 
-insert into vendinha.parametrochavevalor VALUES ('IdadeMinimaPermitida',18,TRUE);
-insert into vendinha.parametrochavevalor VALUES ('ValorMaximo',300,TRUE);
+insert into vendinha.parametrochavevalor(nome, valor,situacao) VALUES ('IdadeMinimaPermitida',18,TRUE);
+insert into vendinha.parametrochavevalor(nome,valor,situacao) VALUES ('ValorMaximo',300,TRUE);
 
 
 

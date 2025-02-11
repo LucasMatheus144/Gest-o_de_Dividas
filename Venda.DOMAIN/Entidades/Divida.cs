@@ -13,8 +13,18 @@ namespace Venda.DOMAIN.Entidades
         [Required]
         public decimal Valor {  get; set; }
 
+        private DateTime _dataCadastro;
+
+        public DateTime DataCadastro
+        {
+            get => _dataCadastro;
+            set => _dataCadastro = DateTime.Now;
+        }
+
+        public DateTime? DataPagamento { get; set; }
+
         public SituacaoDivida Status { get; set; }
 
-        public Cliente ClienteDivida { get; set; }
+        public Cliente Cliente { get; set; }
     }
 }
