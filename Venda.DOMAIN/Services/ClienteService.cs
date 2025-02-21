@@ -34,6 +34,11 @@ namespace Venda.DOMAIN.Services {
                     throw new InvalidOperationException($"Idade Invalida");
                 }
 
+                if (!ValidaEmail(clientes.Email)) // se passar o banco retorna erro por campo ser unique
+                {
+                    throw new InvalidOperationException("Esse email ja existe no sistema");
+                }
+
                 sessao.Save(clientes);
                 salvar.Commit();
                 return true;
@@ -71,6 +76,13 @@ namespace Venda.DOMAIN.Services {
 
             try
             {
+                if (EncontrarCliente.Email != clientes.Email)
+                {
+                    if (!ValidaEmail(clientes.Email))
+                    {
+                        throw new InvalidOperationException("Esse email ja existe no sistema");
+                    }
+                }
                 sessao.Merge(clientes);
                 transaction.Commit();
                 return true;
@@ -122,7 +134,7 @@ namespace Venda.DOMAIN.Services {
             }
         }
 
-        public List<ClienteDTO> ListarCliente(int? id, string? search = "", int limit = 10, int offset = 0)
+        public List<ClienteDTO> ListarCliente(int? id, string? search = "", int limit = 6, int offset = 0)
         {
             using var sessao = _session.OpenSession();
 
@@ -168,6 +180,19 @@ namespace Venda.DOMAIN.Services {
             return parametro.Valor;
         }
 
+        private bool ValidaEmail (string email)
+        {
+            using var sessao = _session.OpenSession();
+
+            var valida = sessao.Query<Cliente>().FirstOrDefault(c => c.Email.ToLower() == email);
+
+            if (valida == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
         private void TratarRetornoErros(Exception ex, List<ValidationResult> erros)
         {
             var message = ex.InnerException?.Message ?? ex.Message;
@@ -178,7 +203,7 @@ namespace Venda.DOMAIN.Services {
             }
             else if (message.Contains("Idade Invalida"))
             {
-                erros.Add(new ValidationResult("Cliente n�o possui a idade minima", new[] { nameof(Cliente.DataNascimento) }));
+                erros.Add(new ValidationResult("Cliente nao possui a idade minima", new[] { nameof(Cliente.DataNascimento) }));
             }
             else if (message.Contains("clientes_email_key"))
             {
@@ -194,7 +219,7 @@ namespace Venda.DOMAIN.Services {
             }
             else
             {
-                erros.Add(new ValidationResult("Erro ao processar a opera��o"));
+                erros.Add(new ValidationResult("Erro ao processar a acao"));
             }
         }
     }

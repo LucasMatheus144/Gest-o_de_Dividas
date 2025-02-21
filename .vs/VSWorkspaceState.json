@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Venda.API"
+    "\\Venda.API",
+    "\\Venda.DOMAIN",
+    "\\Venda.DOMAIN\\Services"
   ],
-  "SelectedNode": "\\Venda.API\\Program.cs",
+  "SelectedNode": "\\Venda.DOMAIN\\Services\\DividasService.cs",
   "PreviewInSolutionExplorer": false
 }
