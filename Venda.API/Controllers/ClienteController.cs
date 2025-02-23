@@ -33,12 +33,12 @@ namespace Venda.API.Controllers
                         });
                 }
 
-                var clientes = clienteService.ListarCliente(id_cliente, Nome, page, size);
+                var clientes = clienteService.ListarCliente(id_cliente, Nome, size, page);
 
                 return Ok(new
                 {
+                    statusCode = 200,
                     data = clientes,
-                    statusCode = 200
                 });
 
             }

@@ -40,7 +40,7 @@ insert into vendinha.parametrochavevalor(nome,valor,situacao) VALUES ('ValorMaxi
 
 
 
-CREATE OR REPLACE FUNCTION vendinha.valida_newdivida(id INT)
+CREATE OR REPLACE FUNCTION vendinha.valida_newdivida(identificador INT)
 RETURNS BOOLEAN AS $$
 DECLARE
     valormaximo INT;
@@ -49,7 +49,7 @@ BEGIN
 
     SELECT valor INTO valormaximo FROM vendinha.parametrochavevalor WHERE id = 2;
     
-    SELECT COALESCE(SUM(d.valor), 0) INTO total FROM vendinha.divida d WHERE d.cliente_id = id;
+    SELECT COALESCE(SUM(d.valor), 0) INTO total FROM vendinha.divida d WHERE d.cliente_id = identificador;
 
     IF total >= valormaximo THEN
         RAISE EXCEPTION 'O cliente já bateu o limite de dívidas.';

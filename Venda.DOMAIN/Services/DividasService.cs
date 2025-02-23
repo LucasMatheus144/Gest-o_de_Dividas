@@ -47,11 +47,12 @@ namespace Venda.DOMAIN.Services {
 
             // validar o valor da divida superior ao parametrizado
 
-            if (ValidaValorDivida(divida.Cliente.Id))
+            if (!ValidaValorDivida(divida.Cliente.Id))
             {
                 errors.Add(new ValidationResult($"O cliente possui dividas superiores ao limite ", new[] { nameof(Divida.Valor) }));
                 return false;
             }
+
 
             try
             {
@@ -115,7 +116,7 @@ namespace Venda.DOMAIN.Services {
             }
         }
 
-        public bool ExcluirDividaClieente(Divida divida, out List<ValidationResult> errors)
+        public bool ExcluirDividaCliente(Divida divida, out List<ValidationResult> errors)
         {
             errors = new List<ValidationResult>();
 
@@ -133,7 +134,7 @@ namespace Venda.DOMAIN.Services {
             var cliente = sessao.Get<Cliente>(divida.Cliente.Id);
             if (cliente == null)
             {
-                errors.Add(new ValidationResult("Cliente n�o encontrado.", new[] { nameof(Divida.Cliente) }));
+                errors.Add(new ValidationResult("Cliente nao encontrado.", new[] { nameof(Divida.Cliente) }));
                 return false;
             }
 
@@ -151,31 +152,27 @@ namespace Venda.DOMAIN.Services {
             }
         }
 
-        public List<DividasDto> ListarDividas(int? id, string? search = "", int limit = 10, int offset = 0)
+        public List<DividasDto> ListarDividas(int id)
         {
             using var sessao = _session.OpenSession();
 
             var query = sessao.Query<Divida>()
-                .Where(d =>
-                    (id == null || d.Cliente.Id == id) &&
-                    (string.IsNullOrWhiteSpace(search) || d.Descricao.Contains(search)))
+                .Where(d => d.Cliente.Id == id)
                 .Select(d => new DividasDto
                 {
                     Id = d.Id,
-                    Nome = d.Cliente.Nome,
                     Descricao = d.Descricao,
                     Valor = d.Valor,
                     Cadastro = d.DataCadastro,
-                    Pagou = d.DataPagamento.HasValue ? d.DataPagamento.Value.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture) : string.Empty
+                    Pagou = d.DataPagamento.HasValue
+                        ? d.DataPagamento.Value.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)
+                        : "Não Pago",
+                    Clientes = d.Cliente
                 })
-                .Skip(offset)
-                .Take(limit)
                 .ToList();
 
             return query;
         }
-
-      
 
         private bool ValidaValorDivida(int id)
         {

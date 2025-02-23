@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-                   assembly="Vendinha.DOMAIN"
-                   namespace="Vendinha.DOMAIN.Entidades">
+                   assembly="Venda.DOMAIN"
+                   namespace="Venda.DOMAIN.Entidades">
 
   <class name="Divida" table="divida" schema="vendinha">
     <id name="Id" column="id">
@@ -12,7 +12,7 @@
 
     <property name="Descricao" column="descricao" length="100"/>
     <property name="Valor" column="valor" not-null="true" type="decimal"/>
-    <property name="Situacao" column="situacao" not-null="true" type="int"/>
+    <property name="Status" column="situacao" not-null="true" type="int"/>
     <property name="DataCadastro" column="d_datacadastro" type="date"/>
     <property name="DataPagamento" column="d_datapagamento" type="date"/>
 	  

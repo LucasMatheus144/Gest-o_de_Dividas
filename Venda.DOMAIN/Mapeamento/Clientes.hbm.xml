@@ -3,7 +3,7 @@
                    assembly="Venda.DOMAIN"
                    namespace="Venda.DOMAIN.Entidades">
 
-  <class name="Cliente" table="cliente">
+  <class name="Cliente"  schema="vendinha" table="clientes">
     <id name="Id" column="id" type="int">
       <generator class="sequence">
         <param name="sequence">vendinha.cliente_id_seq</param>
@@ -13,11 +13,11 @@
     <property name="Nome" column="nome" type="string" not-null="true" length="25"/>
     <property name="Email" column="email" type="string" not-null="true" length="30"/>
     <property name="CpfCnpj" column="cpf_cnpj" type="string" not-null="true"/>
-    <property name="DataNascimento" column="data_nascimento" type="datetime"/>
-    <property name="DataCadastro" column="data_cadastro" type="datetime" not-null="true"/>
+    <property name="DataNascimento" column="d_datanascimeto" type="datetime"/>
+    <property name="DataCadastro" column="d_datacadastro" type="datetime" not-null="true"/>
     <property name="Telefone" column="telefone" type="string" not-null="true"/>
     <property name="Observacao" column="observacao" type="string"/>
-    <property name="Status" column="status" type="int" not-null="true"/>
+    <property name="Status" column="situacao" type="int" not-null="true"/>
   </class>
 
 </hibernate-mapping>

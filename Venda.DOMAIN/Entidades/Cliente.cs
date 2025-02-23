@@ -15,7 +15,7 @@ namespace Venda.DOMAIN.Entidades
 
         [Required]
         [MaxLength(30,ErrorMessage = "O emails precisa ter no maximo 30 caracteres")]
-        [ValidaEmail]
+        [EmailValidationAttribute]
         public string Email { get; set; } = string.Empty;
 
         [Required]
@@ -23,7 +23,13 @@ namespace Venda.DOMAIN.Entidades
 
         public DateTime DataNascimento { get; set; }
 
-        public DateTime DataCadastro {get ;set;} = DateTime.Now;
+        private DateTime _dataCadastro;
+
+        public DateTime DataCadastro
+        {
+            get => _dataCadastro;
+            set => _dataCadastro = DateTime.Now;
+        }
 
         [Required] 
         public string Telefone { get; set; } = string.Empty;

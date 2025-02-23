@@ -23,7 +23,14 @@ namespace Venda.DOMAIN.Entidades
 
         public DateTime? DataPagamento { get; set; }
 
-        public SituacaoDivida Status { get; set; }
+        private SituacaoDivida _status;
+
+        public SituacaoDivida Status 
+        {
+            get => _status;
+            set => _status = SituacaoDivida.EmDia;
+        
+        }
 
         public Cliente Cliente { get; set; }
     }

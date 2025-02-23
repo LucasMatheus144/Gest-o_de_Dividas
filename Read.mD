@@ -33,12 +33,12 @@
 * [x] Criar Mapeamento
 * [x] Conexão com banco de dados
 * [x] DTOS para exibição em tela
-* [] Criar Services Validações para cpf e email
-* [] Criar Services Cllientes
-* [] Criar Services para Dividas
+* [x] Criar Services Validações para cpf e email
+* [x] Criar Services Cllientes
+* [x] Criar Services para Dividas
 
-* [] Criar Api cliente
-* [] Criar Api Dividas
+* [x] Criar Api cliente
+* [x] Criar Api Dividas
 
 * [] Pensar no Prototipo
 * [] Criar Tela Inicial

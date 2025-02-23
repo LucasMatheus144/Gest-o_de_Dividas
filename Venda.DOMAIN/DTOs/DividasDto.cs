@@ -12,10 +12,6 @@ namespace Vendinha.DOMINIO.DTO
 
         public decimal Valor { get; set; }
 
-        public string Nome { get; set; } = string.Empty;
-
-        public string Email { get; set; } = string.Empty;
-
         public DateTime Cadastro { get; set; }
 
         public string? Pagou { get; set; }

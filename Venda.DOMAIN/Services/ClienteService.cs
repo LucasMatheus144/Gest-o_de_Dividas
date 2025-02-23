@@ -34,10 +34,7 @@ namespace Venda.DOMAIN.Services {
                     throw new InvalidOperationException($"Idade Invalida");
                 }
 
-                if (!ValidaEmail(clientes.Email)) // se passar o banco retorna erro por campo ser unique
-                {
-                    throw new InvalidOperationException("Esse email ja existe no sistema");
-                }
+                clientes.Status = SituacaoCliente.Ativo;
 
                 sessao.Save(clientes);
                 salvar.Commit();
@@ -76,13 +73,7 @@ namespace Venda.DOMAIN.Services {
 
             try
             {
-                if (EncontrarCliente.Email != clientes.Email)
-                {
-                    if (!ValidaEmail(clientes.Email))
-                    {
-                        throw new InvalidOperationException("Esse email ja existe no sistema");
-                    }
-                }
+               
                 sessao.Merge(clientes);
                 transaction.Commit();
                 return true;
@@ -139,21 +130,24 @@ namespace Venda.DOMAIN.Services {
             using var sessao = _session.OpenSession();
 
             var query = sessao.Query<Cliente>()
-             .Where(cl =>
-                 (id == null || cl.Id == id) &&
-                 (string.IsNullOrWhiteSpace(search) || cl.Nome.Contains(search)))
-             .GroupJoin(sessao.Query<Divida>(),
-                 cl => cl.Id,
-                 d => d.Cliente.Id,
-                 (cl, dividas) => new ClienteDTO
-                 {
-                     Id = cl.Id,
-                     Nome = cl.Nome,
-                     Email = cl.Email,
-                     CpfCnpj = cl.CpfCnpj,
-                     Telefone = cl.Telefone,
-                     CountDividas = dividas.Count(d => d.Status != SituacaoDivida.EmDia) 
-                 });
+                .GroupJoin(
+                    sessao.Query<Divida>().Where(d => d.Status != SituacaoDivida.Quitado), 
+                    cl => cl.Id,
+                    d => d.Cliente.Id,
+                    (cl, dividas) => new ClienteDTO
+                    {
+                        Id = cl.Id,
+                        Nome = cl.Nome,
+                        Email = cl.Email,
+                        CpfCnpj = cl.CpfCnpj,
+                        Telefone = cl.Telefone,
+                        CountDividas = dividas.Count(),
+                        Status = cl.Status
+                    })
+                .Where(cl =>
+                    (id == null || cl.Id == id) && 
+                    (string.IsNullOrWhiteSpace(search) || cl.Nome.Contains(search)));
+
 
             return query
                 .OrderBy(cl => cl.Nome)
@@ -180,18 +174,7 @@ namespace Venda.DOMAIN.Services {
             return parametro.Valor;
         }
 
-        private bool ValidaEmail (string email)
-        {
-            using var sessao = _session.OpenSession();
-
-            var valida = sessao.Query<Cliente>().FirstOrDefault(c => c.Email.ToLower() == email);
-
-            if (valida == null)
-            {
-                return false;
-            }
-            return true;
-        }
+     
 
         private void TratarRetornoErros(Exception ex, List<ValidationResult> erros)
         {
