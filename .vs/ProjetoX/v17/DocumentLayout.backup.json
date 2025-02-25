@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\lumet\\source\\repos\\gest-o_de_dividas\\venda.domain\\services\\dividasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\services\\dividasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\lumet\\source\\repos\\gest-o_de_dividas\\venda.domain\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\lumet\\source\\repos\\gest-o_de_dividas\\venda.domain\\enums\\situacaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\enums\\situacaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|c:\\users\\lumet\\source\\repos\\gest-o_de_dividas\\venda.domain\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF389A5-4B8C-4BCE-B91B-315BD7512272}|Venda.DOMAIN\\Venda.DOMAIN.csproj|solutionrelative:venda.domain\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 111,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +39,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DividasService.cs",
+              "DocumentMoniker": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Services\\DividasService.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Services\\DividasService.cs",
+              "ToolTip": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Services\\DividasService.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\Services\\DividasService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T02:23:04.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteDTO.cs",
+              "DocumentMoniker": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\DTOs\\ClienteDTO.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\DTOs\\ClienteDTO.cs",
+              "ToolTip": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\DTOs\\ClienteDTO.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\DTOs\\ClienteDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T02:02:39.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SituacaoCliente.cs",
+              "DocumentMoniker": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Enums\\SituacaoCliente.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Enums\\SituacaoCliente.cs",
+              "ToolTip": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Enums\\SituacaoCliente.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\Enums\\SituacaoCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T02:01:34.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteService.cs",
+              "DocumentMoniker": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Services\\ClienteService.cs",
+              "RelativeDocumentMoniker": "Venda.DOMAIN\\Services\\ClienteService.cs",
+              "ToolTip": "C:\\Users\\lumet\\source\\repos\\Gest-o_de_Dividas\\Venda.DOMAIN\\Services\\ClienteService.cs",
+              "RelativeToolTip": "Venda.DOMAIN\\Services\\ClienteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T01:58:30.006Z",
+              "EditorCaption": ""
             }
           ]
         }

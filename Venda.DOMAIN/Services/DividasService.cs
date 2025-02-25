@@ -26,12 +26,6 @@ namespace Venda.DOMAIN.Services {
 
             if (!ValidacaoService.Validar(divida, out errors)) return false;
 
-            //if (divida.Cliente.Id <= 0)
-            //{
-            //    errors.Add(new ValidationResult("Id invalido.", new[] { nameof(Divida.Cliente) }));
-            //    return false;
-            //}
-
             using var sessao = _session.OpenSession();
             using var salvar = sessao.BeginTransaction();
 
@@ -42,9 +36,6 @@ namespace Venda.DOMAIN.Services {
                 return false;
             }
 
-            //divida.Cliente = cliente; 
-
-
             // validar o valor da divida superior ao parametrizado
 
             if (!ValidaValorDivida(divida.Cliente.Id))
@@ -53,6 +44,7 @@ namespace Venda.DOMAIN.Services {
                 return false;
             }
 
+            divida.Status = SituacaoDivida.EmDia;
 
             try
             {

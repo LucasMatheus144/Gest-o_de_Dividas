@@ -1,0 +1,24 @@
+.card{
+    display: flex;
+    border-radius: 10px;
+    max-width: 320px;
+    height: 320px;
+}
+
+.EmDia{
+    border: 1px solid var(--situacao-ativo);
+}
+
+.Cancelado{
+    border: 1px solid var(--situacao-cancelado);
+}
+
+.ComDivida{
+    border: 1px solid var(--situacao-devendo);
+}
+
+.card h4{
+    font-family: "Poppins", serif;
+    font-weight:  500;
+    color: var(--font);
+}

@@ -36,6 +36,7 @@ namespace Venda.DOMAIN.Services {
 
                 clientes.Status = SituacaoCliente.Ativo;
 
+
                 sessao.Save(clientes);
                 salvar.Commit();
                 return true;
@@ -142,7 +143,7 @@ namespace Venda.DOMAIN.Services {
                         CpfCnpj = cl.CpfCnpj,
                         Telefone = cl.Telefone,
                         CountDividas = dividas.Count(),
-                        Status = cl.Status
+                        Status = cl.Status,
                     })
                 .Where(cl =>
                     (id == null || cl.Id == id) && 
@@ -180,9 +181,9 @@ namespace Venda.DOMAIN.Services {
         {
             var message = ex.InnerException?.Message ?? ex.Message;
 
-            if (message.Contains("CPF ou CNPJ"))
+            if (message.Contains("clientes_cpf_cnpj_key"))
             {
-                erros.Add(new ValidationResult("Cpf ou Cnpj Invalidos.", new[] { nameof(Cliente.CpfCnpj) }));
+                erros.Add(new ValidationResult("Cpf ou cnpj ja está cadastrado no sistema", new[] { nameof(Cliente.CpfCnpj) }));
             }
             else if (message.Contains("Idade Invalida"))
             {

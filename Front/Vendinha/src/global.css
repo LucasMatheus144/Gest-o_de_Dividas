@@ -1,0 +1,23 @@
+:root{
+    --black-700          : #191919;
+    --black-500          : #333333;
+    --gray-600           : #4d4d4d;
+    --gray-400           : #666666;
+    --gray-300           : #808080;
+    --situacao-ativo     : #9acb8b;
+    --situacao-cancelado : #46100a;
+    --situacao-devendo   : #fdff60;
+    --font               : #702115;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+
+body{
+    background-color: var(--black-700);
+}
+

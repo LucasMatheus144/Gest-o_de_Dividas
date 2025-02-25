@@ -18,5 +18,6 @@ namespace Venda.DOMAIN.DTOs
         public int CountDividas { get; set; }
 
         public SituacaoCliente Status { get; set; }
+
     }
 }
