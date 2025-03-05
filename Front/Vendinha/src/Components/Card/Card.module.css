@@ -1,8 +1,6 @@
 .card{
     display: flex;
     border-radius: 10px;
-    max-width: 320px;
-    height: 320px;
 }
 
 .EmDia{
@@ -21,4 +19,34 @@
     font-family: "Poppins", serif;
     font-weight:  500;
     color: var(--font);
+}
+
+.container{
+    display: flex;
+}
+
+.foto{
+    position: relative;
+    padding: 10px;
+    max-width: 120px;
+    max-height: 160px;
+    border-radius: 20%;
+}
+
+.info{
+    padding: 0.6em;
+}
+
+.identificador{
+    font-family: "Poppins", serif;
+    font-weight:  500;
+    color: var(--font);
+}
+
+h1{
+    text-align: end;
+}
+
+b{
+    color: red;
 }

@@ -1,4 +1,5 @@
 import styles from './Card.module.css';
+import foto from '../../../public/imgs/the-incredibles-2-logo-hs-2880x1800.jpg';
 
 interface CardProps {
     id: number;
@@ -10,7 +11,7 @@ interface CardProps {
     status: number;
 }
 
-export function Card({ id, nome, email, cpfcnpj, telefone, CountDividas, status }: CardProps) {
+export function Card({ id, nome, email, cpfcnpj, telefone, CountDividas, status  }: CardProps) {
 
     const  StatusClasse = status == 1 ? styles.EmDia :
                         status == 2 ? styles.Cancelado :
@@ -19,15 +20,21 @@ export function Card({ id, nome, email, cpfcnpj, telefone, CountDividas, status 
 
     return (
         <div className={`${styles.card} ${StatusClasse}`}>
-            <div>
-                <img src="" alt="Imagem" />
-                <div>
-                    <h3>{id}</h3>
-                    <h4>{nome}</h4>
-                    <h4>{email}</h4>
-                    <h4>{cpfcnpj}</h4>
-                    <h4>{telefone}</h4>
-                    <h4>{CountDividas}</h4>
+            <div className={styles.container}>
+                <img src={foto} alt="Imagem" className={styles.foto} />
+                <div className={styles.info}>
+                    <div className={styles.identificador}>
+                        <h1>{id}</h1>
+                    </div>
+                    <div className={styles.divida}>
+                        <h4>Dividas Existentes <b>{CountDividas}</b></h4>
+                    </div>
+                    <div className={styles.dados}>
+                        <h4>Nome - {nome}</h4>
+                        <h4>Email - {email}</h4>
+                        <h4>Cpf| Cnpj -{cpfcnpj}</h4>
+                        <h4>Telefone - {telefone}</h4>
+                    </div>   
                 </div>
             </div>
         </div>
