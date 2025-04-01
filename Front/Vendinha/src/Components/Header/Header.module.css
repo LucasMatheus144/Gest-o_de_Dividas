@@ -1,15 +1,24 @@
-.cabeca{
-    display: flex;
+.cabecalho{
     width: 100%;
-    height: 60px;
-    justify-content: center;
+    padding: 3rem 9%;
+    background: #171423;
+    backdrop-filter : blur(10px);
+    display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
 }
 
-.titulo{
-    margin: 0 auto;
-    font-family: "Poppins", serif;
-    font-weight:  500;
-    color: var(--gray-300);
+.txt{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-txtoo );
+    font-family: "Poppins", sans-serif;
+}
+
+.menu{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-txtoo );
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
