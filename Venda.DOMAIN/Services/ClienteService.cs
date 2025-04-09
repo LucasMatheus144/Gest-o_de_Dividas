@@ -160,6 +160,12 @@ namespace Venda.DOMAIN.Services {
        
         }
 
+        public int CountCliente()
+        {
+            using var sessao = _session.OpenSession();
+            return sessao.QueryOver<Cliente>().RowCount();
+        }
+
         private int ValidaIdade(int id)
         {
             using var sessao = _session.OpenSession();

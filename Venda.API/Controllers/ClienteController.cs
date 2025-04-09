@@ -34,10 +34,12 @@ namespace Venda.API.Controllers
                 }
 
                 var clientes = clienteService.ListarCliente(id_cliente, Nome, size, page);
+                var all_clientes = clienteService.CountCliente();
 
                 return Ok(new
                 {
                     statusCode = 200,
+                    qntd_all = all_clientes,
                     data = clientes,
                 });
 
